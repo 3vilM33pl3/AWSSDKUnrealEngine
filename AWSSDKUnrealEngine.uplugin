@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "AWSSDKUnrealEngine",
+	"Description": "AWS SDK integration for Unreal Engine",
+	"Category": "Other",
+	"CreatedBy": "3vilM33pl3",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "AWSSDKBlueprints",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

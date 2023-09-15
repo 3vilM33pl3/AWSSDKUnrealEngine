@@ -1,0 +1,63 @@
+diff --git a/cmake/build_external.cmake b/cmake/build_external.cmake
+index f8cfb63232..ed92ad8d54 100644
+--- a/cmake/build_external.cmake
++++ b/cmake/build_external.cmake
+@@ -131,7 +131,7 @@ if(BUILD_CURL OR BUILD_OPENSSL OR BUILD_ZLIB)
+         -DEXTERNAL_CXX_FLAGS=${EXTERNAL_CXX_FLAGS}
+         -DEXTERNAL_C_FLAGS=${EXTERNAL_C_FLAGS}
+         -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+-        ${CMAKE_CURRENT_SOURCE_DIR}/android-build
++        ${CMAKE_CURRENT_SOURCE_DIR}/tools/android-build
+         WORKING_DIRECTORY ${EXTERNAL_BUILD_DIR}
+         RESULT_VARIABLE CONFIGURE_DEPS_EXIT_CODE)
+ 
+@@ -141,7 +141,7 @@ if(BUILD_CURL OR BUILD_OPENSSL OR BUILD_ZLIB)
+ 
+     include(ProcessorCount)
+     ProcessorCount(NUM_JOBS)
+-    execute_process(COMMAND ${CMAKE_COMMAND} --build ${EXTERNAL_BUILD_DIR} --config ${CMAKE_BUILD_TYPE} -- -j ${NUM_JOBS}
++    execute_process(COMMAND ${CMAKE_COMMAND} --build ${EXTERNAL_BUILD_DIR} --config ${CMAKE_BUILD_TYPE} -j ${NUM_JOBS}
+     RESULT_VARIABLE BUILD_DEPS_EXIT_CODE)
+ 
+     if (NOT ${BUILD_DEPS_EXIT_CODE} EQUAL 0)
+diff --git a/crt/aws-crt-cpp b/crt/aws-crt-cpp
+--- a/crt/aws-crt-cpp
++++ b/crt/aws-crt-cpp
+@@ -1 +1 @@
+-Subproject commit cf0a346249c384329a902a29cb473b108fb204ba
++Subproject commit cf0a346249c384329a902a29cb473b108fb204ba-dirty
+diff --git a/tools/android-build/CMakeLists.txt b/tools/android-build/CMakeLists.txt
+index d88f235750..dedf79cec8 100644
+--- a/tools/android-build/CMakeLists.txt
++++ b/tools/android-build/CMakeLists.txt
+@@ -39,7 +39,7 @@ if(BUILD_OPENSSL)
+         GIT_REPOSITORY https://github.com/openssl/openssl.git
+         GIT_TAG e2e09d9fba1187f8d6aafaa34d4172f56f1ffb72 # 1.1.1g
+         UPDATE_COMMAND ""
+-        PATCH_COMMAND cd ${CMAKE_BINARY_DIR} && python ${AWS_NATIVE_SDK_ROOT}/android-build/configure_openssl_cmake.py --source ${AWS_NATIVE_SDK_ROOT} --dest ${OPENSSL_SOURCE_DIR}
++        PATCH_COMMAND cd ${CMAKE_BINARY_DIR} && python ${AWS_NATIVE_SDK_ROOT}/tools/android-build/configure_openssl_cmake.py --source ${AWS_NATIVE_SDK_ROOT} --dest ${OPENSSL_SOURCE_DIR}
+         CMAKE_ARGS
+         -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
+         -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=${CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION}
+@@ -66,7 +66,7 @@ if(BUILD_CURL)
+         UPDATE_COMMAND ""
+         PATCH_COMMAND ""
+         CMAKE_ARGS
+-        -C ${AWS_NATIVE_SDK_ROOT}/android-build/CurlAndroidCrossCompile.cmake
++        -C ${AWS_NATIVE_SDK_ROOT}/tools/android-build/CurlAndroidCrossCompile.cmake
+         -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
+         -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=${CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION}
+         -DANDROID_NATIVE_API_LEVEL=${ANDROID_NATIVE_API_LEVEL}
+diff --git a/tools/android-build/configure_openssl_cmake.py b/tools/android-build/configure_openssl_cmake.py
+index 1fbf2d90f9..f7bf26ef90 100644
+--- a/tools/android-build/configure_openssl_cmake.py
++++ b/tools/android-build/configure_openssl_cmake.py
+@@ -10,7 +10,7 @@ import platform
+ # openssl doesn't have any cmake files; this script copies in cmake files to appropriate directories
+ # The CMakeFiles.txt and *.cmake files are variants of what can be found at https://github.com/janbar/openssl-cmake
+ def CopyCMakeFiles(baseDir, destDir):
+-    sourceDir = os.path.join(baseDir, "android-build", "cmakefiles", "openssl-cmake")
++    sourceDir = os.path.join(baseDir, "tools", "android-build", "cmakefiles", "openssl-cmake")
+     dirLength = len(sourceDir)
+ 
+     for rootDir, dirNames, fileNames in os.walk(sourceDir):
