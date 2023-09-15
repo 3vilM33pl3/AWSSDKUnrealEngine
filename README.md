@@ -12,9 +12,9 @@ More will follow.
 
 ## Compiled modules
 The following AWS modules are compiled and included in this plugin:
-`aws-sdk-s3`
-`aws-cognito-identity;`
-`aws-cognito-idp`
+- `aws-sdk-s3`
+- `aws-cognito-identity;`
+- `aws-cognito-idp`
 
 If you're looking for a specific module, contact me are create a pull reqyest.
 
