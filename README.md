@@ -16,7 +16,7 @@ The following AWS modules are compiled and included in this plugin:
 - `aws-cognito-identity;`
 - `aws-cognito-idp`
 
-If you're looking for a specific module, contact me are create a pull reqyest.
+If you're looking for a specific module, contact me or create a pull reqyest.
 
 ## How to use
 1. Clone this repository into your project's `Plugins` folder.
