@@ -27,7 +27,7 @@ that shows how to list S3 buckets as a Blueprint function.
 The `Scripts` folder contains scripts to compile the SDK for the supported platforms. This is where you can add 
 additional modules. Look for the line `-DBUILD_ONLY:STRING="s3;cognito-identity;cognito-idp"` in the scripts to add
 the name of the AWS module you want to compile. [Here](https://github.com/aws/aws-sdk-cpp/tree/main/generated/src) is the 
-list of the exact names of all the modules available in the AWS SDK for C++. Add the without the `aws-sdk-` prefix.
+list of the exact names of all the modules available in the AWS SDK for C++. Add without the `aws-sdk-` prefix.
 
 
 
