@@ -181,16 +181,10 @@ enum aws_mqtt5_extended_validation_and_flow_control_options {
     AWS_MQTT5_EVAFCO_NONE,
 
     /**
-     * Apply additional client-side validation and operational flow control that respects the
+     * Apply additional client-side operational flow control that respects the
      * default AWS IoT Core limits.
      *
-     * Currently applies the following additional validation:
-     *  (1) No more than 8 subscriptions per SUBSCRIBE packet
-     *  (2) Topics and topic filters have a maximum of 7 slashes (8 segments), not counting any AWS rules prefix
-     *  (3) Topics must be <= 256 bytes in length
-     *  (4) Client id must be <= 128 bytes in length
-     *
-     * Also applies the following flow control:
+     * Applies the following flow control:
      *  (1) Outbound throughput throttled to 512KB/s
      *  (2) Outbound publish TPS throttled to 100
      */
@@ -794,12 +788,14 @@ AWS_MQTT_API int aws_mqtt5_negotiated_settings_init(
     const struct aws_byte_cursor *client_id);
 
 /**
- * Makes an owning copy of a negotiated settings structure
+ * Makes an owning copy of a negotiated settings structure.
  *
  * @param source settings to copy from
  * @param dest settings to copy into.  Must be in a zeroed or initialized state because it gets clean up
  *  called on it as the first step of the copy process.
  * @return success/failure
+ *
+ * Used in downstream.
  */
 AWS_MQTT_API int aws_mqtt5_negotiated_settings_copy(
     const struct aws_mqtt5_negotiated_settings *source,

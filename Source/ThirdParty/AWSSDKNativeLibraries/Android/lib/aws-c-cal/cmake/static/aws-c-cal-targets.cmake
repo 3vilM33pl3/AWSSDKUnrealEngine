@@ -60,7 +60,7 @@ endif()
 add_library(AWS::aws-c-cal STATIC IMPORTED)
 
 set_target_properties(AWS::aws-c-cal PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/Users/Shared/Epic Games/UE_5.2/Engine/Source/ThirdParty/OpenSSL/1.1.1n/include/Android"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/Users/Shared/Epic Games/UE_5.2/Engine/Source/ThirdParty/OpenSSL/1.1.1n/include/Android/;${_IMPORT_PREFIX}/include;/Users/Shared/Epic Games/UE_5.2/Engine/Source/ThirdParty/OpenSSL/1.1.1n/include/Android/"
   INTERFACE_LINK_LIBRARIES "AWS::aws-c-common;crypto"
 )
 

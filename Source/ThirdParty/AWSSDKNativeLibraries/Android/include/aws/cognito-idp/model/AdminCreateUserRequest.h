@@ -85,58 +85,114 @@ namespace Model
 
 
     /**
-     * <p>The username for the user. Must be unique within the user pool. Must be a
-     * UTF-8 string between 1 and 128 characters. After the user is created, the
-     * username can't be changed.</p>
+     * <p>The value that you want to set as the username sign-in attribute. The
+     * following conditions apply to the username parameter.</p> <ul> <li> <p>The
+     * username can't be a duplicate of another username in the same user pool.</p>
+     * </li> <li> <p>You can't change the value of a username after you create it.</p>
+     * </li> <li> <p>You can only provide a value if usernames are a valid sign-in
+     * attribute for your user pool. If your user pool only supports phone numbers or
+     * email addresses as sign-in attributes, Amazon Cognito automatically generates a
+     * username value. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases">Customizing
+     * sign-in attributes</a>.</p> </li> </ul>
      */
     inline const Aws::String& GetUsername() const{ return m_username; }
 
     /**
-     * <p>The username for the user. Must be unique within the user pool. Must be a
-     * UTF-8 string between 1 and 128 characters. After the user is created, the
-     * username can't be changed.</p>
+     * <p>The value that you want to set as the username sign-in attribute. The
+     * following conditions apply to the username parameter.</p> <ul> <li> <p>The
+     * username can't be a duplicate of another username in the same user pool.</p>
+     * </li> <li> <p>You can't change the value of a username after you create it.</p>
+     * </li> <li> <p>You can only provide a value if usernames are a valid sign-in
+     * attribute for your user pool. If your user pool only supports phone numbers or
+     * email addresses as sign-in attributes, Amazon Cognito automatically generates a
+     * username value. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases">Customizing
+     * sign-in attributes</a>.</p> </li> </ul>
      */
     inline bool UsernameHasBeenSet() const { return m_usernameHasBeenSet; }
 
     /**
-     * <p>The username for the user. Must be unique within the user pool. Must be a
-     * UTF-8 string between 1 and 128 characters. After the user is created, the
-     * username can't be changed.</p>
+     * <p>The value that you want to set as the username sign-in attribute. The
+     * following conditions apply to the username parameter.</p> <ul> <li> <p>The
+     * username can't be a duplicate of another username in the same user pool.</p>
+     * </li> <li> <p>You can't change the value of a username after you create it.</p>
+     * </li> <li> <p>You can only provide a value if usernames are a valid sign-in
+     * attribute for your user pool. If your user pool only supports phone numbers or
+     * email addresses as sign-in attributes, Amazon Cognito automatically generates a
+     * username value. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases">Customizing
+     * sign-in attributes</a>.</p> </li> </ul>
      */
     inline void SetUsername(const Aws::String& value) { m_usernameHasBeenSet = true; m_username = value; }
 
     /**
-     * <p>The username for the user. Must be unique within the user pool. Must be a
-     * UTF-8 string between 1 and 128 characters. After the user is created, the
-     * username can't be changed.</p>
+     * <p>The value that you want to set as the username sign-in attribute. The
+     * following conditions apply to the username parameter.</p> <ul> <li> <p>The
+     * username can't be a duplicate of another username in the same user pool.</p>
+     * </li> <li> <p>You can't change the value of a username after you create it.</p>
+     * </li> <li> <p>You can only provide a value if usernames are a valid sign-in
+     * attribute for your user pool. If your user pool only supports phone numbers or
+     * email addresses as sign-in attributes, Amazon Cognito automatically generates a
+     * username value. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases">Customizing
+     * sign-in attributes</a>.</p> </li> </ul>
      */
     inline void SetUsername(Aws::String&& value) { m_usernameHasBeenSet = true; m_username = std::move(value); }
 
     /**
-     * <p>The username for the user. Must be unique within the user pool. Must be a
-     * UTF-8 string between 1 and 128 characters. After the user is created, the
-     * username can't be changed.</p>
+     * <p>The value that you want to set as the username sign-in attribute. The
+     * following conditions apply to the username parameter.</p> <ul> <li> <p>The
+     * username can't be a duplicate of another username in the same user pool.</p>
+     * </li> <li> <p>You can't change the value of a username after you create it.</p>
+     * </li> <li> <p>You can only provide a value if usernames are a valid sign-in
+     * attribute for your user pool. If your user pool only supports phone numbers or
+     * email addresses as sign-in attributes, Amazon Cognito automatically generates a
+     * username value. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases">Customizing
+     * sign-in attributes</a>.</p> </li> </ul>
      */
     inline void SetUsername(const char* value) { m_usernameHasBeenSet = true; m_username.assign(value); }
 
     /**
-     * <p>The username for the user. Must be unique within the user pool. Must be a
-     * UTF-8 string between 1 and 128 characters. After the user is created, the
-     * username can't be changed.</p>
+     * <p>The value that you want to set as the username sign-in attribute. The
+     * following conditions apply to the username parameter.</p> <ul> <li> <p>The
+     * username can't be a duplicate of another username in the same user pool.</p>
+     * </li> <li> <p>You can't change the value of a username after you create it.</p>
+     * </li> <li> <p>You can only provide a value if usernames are a valid sign-in
+     * attribute for your user pool. If your user pool only supports phone numbers or
+     * email addresses as sign-in attributes, Amazon Cognito automatically generates a
+     * username value. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases">Customizing
+     * sign-in attributes</a>.</p> </li> </ul>
      */
     inline AdminCreateUserRequest& WithUsername(const Aws::String& value) { SetUsername(value); return *this;}
 
     /**
-     * <p>The username for the user. Must be unique within the user pool. Must be a
-     * UTF-8 string between 1 and 128 characters. After the user is created, the
-     * username can't be changed.</p>
+     * <p>The value that you want to set as the username sign-in attribute. The
+     * following conditions apply to the username parameter.</p> <ul> <li> <p>The
+     * username can't be a duplicate of another username in the same user pool.</p>
+     * </li> <li> <p>You can't change the value of a username after you create it.</p>
+     * </li> <li> <p>You can only provide a value if usernames are a valid sign-in
+     * attribute for your user pool. If your user pool only supports phone numbers or
+     * email addresses as sign-in attributes, Amazon Cognito automatically generates a
+     * username value. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases">Customizing
+     * sign-in attributes</a>.</p> </li> </ul>
      */
     inline AdminCreateUserRequest& WithUsername(Aws::String&& value) { SetUsername(std::move(value)); return *this;}
 
     /**
-     * <p>The username for the user. Must be unique within the user pool. Must be a
-     * UTF-8 string between 1 and 128 characters. After the user is created, the
-     * username can't be changed.</p>
+     * <p>The value that you want to set as the username sign-in attribute. The
+     * following conditions apply to the username parameter.</p> <ul> <li> <p>The
+     * username can't be a duplicate of another username in the same user pool.</p>
+     * </li> <li> <p>You can't change the value of a username after you create it.</p>
+     * </li> <li> <p>You can only provide a value if usernames are a valid sign-in
+     * attribute for your user pool. If your user pool only supports phone numbers or
+     * email addresses as sign-in attributes, Amazon Cognito automatically generates a
+     * username value. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases">Customizing
+     * sign-in attributes</a>.</p> </li> </ul>
      */
     inline AdminCreateUserRequest& WithUsername(const char* value) { SetUsername(value); return *this;}
 
@@ -479,9 +535,9 @@ namespace Model
      * to be used in all future sign-ins.</p> <p>This parameter isn't required. If you
      * don't specify a value, Amazon Cognito generates one for you.</p> <p>The
      * temporary password can only be used until the user account expiration limit that
-     * you specified when you created the user pool. To reset the account after that
-     * time limit, you must call <code>AdminCreateUser</code> again, specifying
-     * <code>"RESEND"</code> for the <code>MessageAction</code> parameter.</p>
+     * you set for your user pool. To reset the account after that time limit, you must
+     * call <code>AdminCreateUser</code> again and specify <code>RESEND</code> for the
+     * <code>MessageAction</code> parameter.</p>
      */
     inline const Aws::String& GetTemporaryPassword() const{ return m_temporaryPassword; }
 
@@ -493,9 +549,9 @@ namespace Model
      * to be used in all future sign-ins.</p> <p>This parameter isn't required. If you
      * don't specify a value, Amazon Cognito generates one for you.</p> <p>The
      * temporary password can only be used until the user account expiration limit that
-     * you specified when you created the user pool. To reset the account after that
-     * time limit, you must call <code>AdminCreateUser</code> again, specifying
-     * <code>"RESEND"</code> for the <code>MessageAction</code> parameter.</p>
+     * you set for your user pool. To reset the account after that time limit, you must
+     * call <code>AdminCreateUser</code> again and specify <code>RESEND</code> for the
+     * <code>MessageAction</code> parameter.</p>
      */
     inline bool TemporaryPasswordHasBeenSet() const { return m_temporaryPasswordHasBeenSet; }
 
@@ -507,9 +563,9 @@ namespace Model
      * to be used in all future sign-ins.</p> <p>This parameter isn't required. If you
      * don't specify a value, Amazon Cognito generates one for you.</p> <p>The
      * temporary password can only be used until the user account expiration limit that
-     * you specified when you created the user pool. To reset the account after that
-     * time limit, you must call <code>AdminCreateUser</code> again, specifying
-     * <code>"RESEND"</code> for the <code>MessageAction</code> parameter.</p>
+     * you set for your user pool. To reset the account after that time limit, you must
+     * call <code>AdminCreateUser</code> again and specify <code>RESEND</code> for the
+     * <code>MessageAction</code> parameter.</p>
      */
     inline void SetTemporaryPassword(const Aws::String& value) { m_temporaryPasswordHasBeenSet = true; m_temporaryPassword = value; }
 
@@ -521,9 +577,9 @@ namespace Model
      * to be used in all future sign-ins.</p> <p>This parameter isn't required. If you
      * don't specify a value, Amazon Cognito generates one for you.</p> <p>The
      * temporary password can only be used until the user account expiration limit that
-     * you specified when you created the user pool. To reset the account after that
-     * time limit, you must call <code>AdminCreateUser</code> again, specifying
-     * <code>"RESEND"</code> for the <code>MessageAction</code> parameter.</p>
+     * you set for your user pool. To reset the account after that time limit, you must
+     * call <code>AdminCreateUser</code> again and specify <code>RESEND</code> for the
+     * <code>MessageAction</code> parameter.</p>
      */
     inline void SetTemporaryPassword(Aws::String&& value) { m_temporaryPasswordHasBeenSet = true; m_temporaryPassword = std::move(value); }
 
@@ -535,9 +591,9 @@ namespace Model
      * to be used in all future sign-ins.</p> <p>This parameter isn't required. If you
      * don't specify a value, Amazon Cognito generates one for you.</p> <p>The
      * temporary password can only be used until the user account expiration limit that
-     * you specified when you created the user pool. To reset the account after that
-     * time limit, you must call <code>AdminCreateUser</code> again, specifying
-     * <code>"RESEND"</code> for the <code>MessageAction</code> parameter.</p>
+     * you set for your user pool. To reset the account after that time limit, you must
+     * call <code>AdminCreateUser</code> again and specify <code>RESEND</code> for the
+     * <code>MessageAction</code> parameter.</p>
      */
     inline void SetTemporaryPassword(const char* value) { m_temporaryPasswordHasBeenSet = true; m_temporaryPassword.assign(value); }
 
@@ -549,9 +605,9 @@ namespace Model
      * to be used in all future sign-ins.</p> <p>This parameter isn't required. If you
      * don't specify a value, Amazon Cognito generates one for you.</p> <p>The
      * temporary password can only be used until the user account expiration limit that
-     * you specified when you created the user pool. To reset the account after that
-     * time limit, you must call <code>AdminCreateUser</code> again, specifying
-     * <code>"RESEND"</code> for the <code>MessageAction</code> parameter.</p>
+     * you set for your user pool. To reset the account after that time limit, you must
+     * call <code>AdminCreateUser</code> again and specify <code>RESEND</code> for the
+     * <code>MessageAction</code> parameter.</p>
      */
     inline AdminCreateUserRequest& WithTemporaryPassword(const Aws::String& value) { SetTemporaryPassword(value); return *this;}
 
@@ -563,9 +619,9 @@ namespace Model
      * to be used in all future sign-ins.</p> <p>This parameter isn't required. If you
      * don't specify a value, Amazon Cognito generates one for you.</p> <p>The
      * temporary password can only be used until the user account expiration limit that
-     * you specified when you created the user pool. To reset the account after that
-     * time limit, you must call <code>AdminCreateUser</code> again, specifying
-     * <code>"RESEND"</code> for the <code>MessageAction</code> parameter.</p>
+     * you set for your user pool. To reset the account after that time limit, you must
+     * call <code>AdminCreateUser</code> again and specify <code>RESEND</code> for the
+     * <code>MessageAction</code> parameter.</p>
      */
     inline AdminCreateUserRequest& WithTemporaryPassword(Aws::String&& value) { SetTemporaryPassword(std::move(value)); return *this;}
 
@@ -577,9 +633,9 @@ namespace Model
      * to be used in all future sign-ins.</p> <p>This parameter isn't required. If you
      * don't specify a value, Amazon Cognito generates one for you.</p> <p>The
      * temporary password can only be used until the user account expiration limit that
-     * you specified when you created the user pool. To reset the account after that
-     * time limit, you must call <code>AdminCreateUser</code> again, specifying
-     * <code>"RESEND"</code> for the <code>MessageAction</code> parameter.</p>
+     * you set for your user pool. To reset the account after that time limit, you must
+     * call <code>AdminCreateUser</code> again and specify <code>RESEND</code> for the
+     * <code>MessageAction</code> parameter.</p>
      */
     inline AdminCreateUserRequest& WithTemporaryPassword(const char* value) { SetTemporaryPassword(value); return *this;}
 

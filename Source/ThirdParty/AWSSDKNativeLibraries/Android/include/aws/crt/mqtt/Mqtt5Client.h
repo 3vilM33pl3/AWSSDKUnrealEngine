@@ -5,6 +5,7 @@
  */
 #include <aws/crt/http/HttpConnection.h>
 #include <aws/crt/mqtt/Mqtt5Types.h>
+#include <aws/crt/mqtt/MqttClient.h>
 
 namespace Aws
 {
@@ -26,6 +27,8 @@ namespace Aws
             class UnsubscribePacket;
             class UnSubAckPacket;
             class Mqtt5ClientCore;
+
+            class Mqtt5to3AdapterOptions;
 
             struct AWS_CRT_CPP_API ReconnectOptions
             {
@@ -214,6 +217,8 @@ namespace Aws
              */
             class AWS_CRT_CPP_API Mqtt5Client final : public std::enable_shared_from_this<Mqtt5Client>
             {
+                friend class Mqtt::MqttConnection;
+
               public:
                 /**
                  * Factory function for mqtt5 client
@@ -331,9 +336,8 @@ namespace Aws
              */
             class AWS_CRT_CPP_API Mqtt5ClientOptions final
             {
-
-                friend class Mqtt5Client;
                 friend class Mqtt5ClientCore;
+                friend class Mqtt5to3AdapterOptions;
 
               public:
                 /**
@@ -632,7 +636,7 @@ namespace Aws
 
                 /**
                  * TLS context for secure socket connections.
-                 * If undefined, then a plaintext connection will be used.
+                 * If undefined, a plaintext connection will be used.
                  */
                 Crt::Optional<Crt::Io::TlsConnectionOptions> m_tlsConnectionOptions;
 

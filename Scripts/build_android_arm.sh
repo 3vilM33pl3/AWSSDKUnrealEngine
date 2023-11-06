@@ -70,7 +70,7 @@ cd cmake-build-android-arm || exit
 #      -B .     
 
 cmake -DCMAKE_INSTALL_PREFIX="../../Source/ThirdParty/AWSSDKNativeLibraries/Android" \
-      -DBUILD_ONLY:STRING="s3;cognito-identity;cognito-idp" \
+      -DBUILD_ONLY:STRING="s3;cognito-identity;cognito-idp;ssm" \
       -DENABLE_TESTING:BOOL=OFF \
       -DBUILD_SHARED_LIBS:BOOL=OFF \
       -DCUSTOM_MEMORY_MANAGEMENT:BOOL=ON \
